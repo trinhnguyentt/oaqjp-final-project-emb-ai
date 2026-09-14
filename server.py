@@ -40,17 +40,17 @@ def emo_detector():
     fear = response['fear']
     joy = response['joy']
     sadness = response['sadness']
-    dominant = response['dominant_emotion']
+    dominant_emotion = response['dominant_emotion']
 
     # Check if the label is None, indicating an error or invalid input
-    if emotion is None:
+    if dominant_emotion is None:
         return "Invalid input! Try again."
     # Return a formatted string with the response
     return (
         f"For the given statement, the system response is "
         f"'anger': {anger}, 'disgust': {disgust}, 'fear': {fear}, "
         f"'joy': {joy}, 'sadness': {sadness}. "
-        f"The dominant emotion is {dominant}."
+        f"The dominant emotion is {dominant_emotion}."
     )
 
 @app.route("/")
